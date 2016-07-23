@@ -2,10 +2,10 @@
 
     Savely is short for "SAVE safeLY"
 
-    Lets you safely build a collection of files an folders.  It keeps track of everything written to disk, and automatically deletes everything we created if an error is encountered.
+    Lets you safely build a collection of files and folders.  It keeps track of everything written to disk, and automatically deletes everything we created if an error is encountered.
 
     Contains classes "Path" and "Savely".
-    
+
 """
 
 import os, sys
@@ -44,6 +44,7 @@ class Path(object):
 
 
 class Savely(object):
+    """Class for safe creation of files and folders.  Features include recursively adding folders as necessary, and keeping track of everything written to disk so that we may delete our files/folders (but not preexisting files/folders) if an error is encountered."""
     def __init__(self):
         self.files = []
         self.folders = []
