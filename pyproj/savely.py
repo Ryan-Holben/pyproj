@@ -94,7 +94,7 @@ class Savely(object):
             print "Fatal exception during exit callback:", e
 
     def exit(self, error):
-        """This should be called to exit, rather than the Python-included function exit().  If Python's exit() is called, we will assume no error has occurred, and not clean up any files."""
+        """This should be called to exit, rather than the Python-included function exit().  If Python's exit() is called, we will assume an error HAS occurred, and delete our files and folders."""
         self.error = error
         exit(error)
 
